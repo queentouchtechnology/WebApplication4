@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="max-age=604800" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavivanar&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Meera+Inimai&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pavanam&display=swap" rel="stylesheet">
+
+
+    <title>Today Bible Quiz Answer</title>
+
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap4 files-->
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font awesome 5 -->
+    <link href="fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="css/mobile.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- custom javascript -->
+    <script src="js/script.js" type="text/javascript"></script>
+
+   
+
+    <style>
+        .tamiltxt_italic {
+            font-family: 'Kavivanar', cursive;
+            font-weight: 600;
+        }
+
+        .tamiltxt {
+            font-family: 'Pavanam', sans-serif;
+            font-weight: 600;
+        }
+
+
+
+        .tamil_h_txt {
+            font-family: 'Meera Inimai', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+
+
+    <!-- =============== screen-wrap =============== -->
+    <div class="screen-wrap">
+
+
+        <header class="app-header bg-primary">
+            <a href="javascript:history.go(-1)" class="btn-header"><i class="fa fa-arrow-left"></i></a>
+            <h5 class="title-header tamil_h_txt"> Ldjmission</h5>
+            <div class="header-right">  <a href="#" class="btn-header"> <i class="fa fa-search"></i> </a> </div>
+        </header> <!-- section-header.// -->
+
+        <main class="app-content">
+            <section class="padding-around  ">
+                <h5 class="title-section  ">    Answer</h5>
+            </section> <!-- section body .// -->
+
+            <hr class="divider my-3">
+
+            <h5 class="title-section verse tamiltxt">
+
+            </h5>
+
+            <section class="padding-x">
+                <article class="card shadow-sm mb-3">
+                    <div class="card-body tamiltxt gallery">
+                       
+                    </div>
+                </article>
+
+                <article class="card shadow-sm mb-3">
+                    <div class="card-body">
+                       --
+                    </div>
+                </article>
+
+
+            </section> <!-- section-products  .// -->
+
+
+
+        </main>
+        <nav class="nav-bottom">
+            <a href="index.html" class="nav-link"><i class="icon fa fa-home"></i><span class="text">Home</span></a>
+            <a href="#" class="nav-link"><i class="icon fa fa-shopping-cart"></i><span class="text">My cart</span></a>
+            <a href="#" class="nav-link"><i class="icon fa fa-user"></i><span class="text">Profile</span></a>
+        </nav> <!-- nav-bottom -->
+
+    </div>
+    <!-- =============== screen-wrap end.// =============== -->
+
+
+    <script type="text/javascript">
+        /// some script
+
+        // jquery ready start
+        $(document).ready(function () {
+            // jQuery code
+
+        });
+
+
+        window.onload = function () {
+
+            Getvideolist("full_video_list");
+
+        }
+
+
+        function Getvideolist(callback) {
+            // var customerId = document.getElementById("txtCustomerId").value;
+            var customerId = 1;
+            //Create a SCRIPT element.
+            var script = document.createElement("script");
+            var site = "queentouchtech.in";
+            var fol = "ldjm/handlers";
+            var file = "biblequiz-question.ashx";
+            //Set the Type.
+            script.type = "text/javascript";
+
+            //Set the source to the URL the JSON Service.
+            script.src = 'https://' + site + '/' + fol + '/' + file + '?callback=' + callback + '';
+            
+            //Append the script element to the HEAD section.
+            document.getElementsByTagName("head")[0].appendChild(script);
+        };
+
+        function full_video_list(response) {
+
+
+            
+            var gallerylist = document.getElementsByClassName("gallery")[0];
+            var dvverse = document.getElementsByClassName("verse")[0];
+            
+            var html = '';
+          
+            for (var i = 0; i < response.length; i++) {
+
+                html += response[i].quiz_answer ;
+                dvverse.insertAdjacentHTML('beforeend', response[i].quiz_verse);
+            }
+            gallerylist.insertAdjacentHTML('beforeend', html);
+        }
+
+// jquery end</script>
+</body>
+
+</html>
