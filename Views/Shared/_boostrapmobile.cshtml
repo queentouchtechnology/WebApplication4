@@ -5,39 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/mobilescripts/js")
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("SignIN", "signin", "Home")</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container bg-danger body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+    <div class="screen-wrap">
+
+
+        <header class="app-header bg-primary">
+            <a href="javascript:history.go(-1)" class="btn-header"><i class="fa fa-arrow-left"></i></a>
+            <div class="header-right">  </div>
+        </header> <!-- section-header.// -->
+
+        <main class="app-content">
+
+            
+            @RenderBody()
+            <hr />
+            
+
+        </main>
+
+        <nav class="nav-bottom">
+            <a href="index.html" class="nav-link">
+                <i class="icon fa fa-home"></i><span class="text">Home</span>
+            </a>
+
+            <a href="page-category-1.html" class="nav-link">
+                <i class="icon fa fa-th"></i><span class="text">Category</span>
+            </a>
+
+            <a href="page-cart-1.html" class="nav-link">
+                <i class="icon fa fa-shopping-cart"></i><span class="text">Cart</span>
+            </a>
+
+            <a href="page-profile.html" class="nav-link active">
+                <i class="icon fa fa-user"></i><span class="text">Profile</span>
+            </a>
+        </nav> <!-- nav-bottom -->
+
+
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
 </body>
 </html>
