@@ -36,9 +36,31 @@ namespace WebApplication4.Controllers
 
         public ActionResult createaccount()
         {
-            ViewBag.Message = "Your contact page.";
-
+           return View();
+        }
+        public ActionResult dashboard()
+        {
+           return View();
+        }
+        public ActionResult profile()
+        {
             return View();
         }
+
+        public ActionResult bible()
+        {
+            return View();
+        }
+        public ActionResult shop()
+        {
+            return View();
+        }
+        public ActionResult edit_profile()
+        {
+            return View();
+        }
+
+        
+
     }
 }

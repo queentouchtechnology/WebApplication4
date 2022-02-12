@@ -12,7 +12,7 @@
     <div class="screen-wrap">
 
 
-        <header class="app-header bg-primary">
+        <header style=" display:none;" class="app-header bg-primary">
             <a href="javascript:history.go(-1)" class="btn-header"><i class="fa fa-arrow-left"></i></a>
             <div class="header-right">  </div>
         </header> <!-- section-header.// -->
@@ -27,19 +27,21 @@
         </main>
 
         <nav class="nav-bottom">
-            <a href="index.html" class="nav-link">
+            <a href="@Url.Action("dashboard", "Home")" class="nav-link">
                 <i class="icon fa fa-home"></i><span class="text">Home</span>
             </a>
 
-            <a href="page-category-1.html" class="nav-link">
-                <i class="icon fa fa-th"></i><span class="text">Category</span>
+            <a href="@Url.Action("bible", "Home")" class="nav-link">
+              
+
+                <i class="icon fa fa-book"></i><span class="text">Bible</span>
             </a>
 
-            <a href="page-cart-1.html" class="nav-link">
-                <i class="icon fa fa-shopping-cart"></i><span class="text">Cart</span>
+            <a href="@Url.Action("shop", "Home")" class="nav-link">
+                <i class="icon fa fa-shopping-cart"></i><span class="text">Shop</span>
             </a>
 
-            <a href="page-profile.html" class="nav-link active">
+            <a href="@Url.Action("profile", "Home")" class="nav-link active">
                 <i class="icon fa fa-user"></i><span class="text">Profile</span>
             </a>
         </nav> <!-- nav-bottom -->

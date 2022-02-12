@@ -1,10 +1,10 @@
 ﻿
 @{
-    ViewBag.Title = "createaccount";
+    ViewBag.Title = "";
     Layout = "~/Views/Shared/_boostrapmobile.cshtml";
 }
 
-<h2>createaccount</h2>
+
 <div class="bg-primary padding-x padding-bottom">
     <h3 class="title-page text-white">Create Account</h3>
 </div>
@@ -24,7 +24,7 @@
     </form>
 
     <p class="text-center">
-        Don’t have account <br> <a href="@Html.ActionLink("signin", "signin", "Home")" class="btn-link">Sign In</a>
+        Don’t have account <br> <a href="@Url.Action("signin", "Home")" class="btn-link">Sign In</a>
     </p>
 
 </section>
