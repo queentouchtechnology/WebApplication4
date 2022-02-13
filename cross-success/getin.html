@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>QUEEN TOUCH TECHNOLOGY</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="shortcut icon" href="images/favicon1.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon1.ico" type="image/x-icon">
+
+</head>
+<body style=" background-color: #F0FFF2;">
+
+    <div class="container">
+
+
+
+
+        <div class=" row mt-5 m-5" >
+            <div class="col text-center m-5">
+                <h1 class=" badge badge-success m-5 rounded-circle" style=" font-size:250px;" id="counter"></h1>
+                </div>
+            </div>
+        </div>
+
+            <script>
+                var counter = 10;
+                var interval = setInterval(function () {
+
+                  
+                        counter--;
+                        
+                        // Display 'counter' wherever you want to display it.
+                    if (counter == 0) {
+
+                        // Display a login box
+                        // clearInterval(interval);
+                        window.location.href = "shuffle.aspx";
+
+                    }
+                    else if (counter < 0) {
+
+
+                    }
+                    else {
+                        $("#counter").html(counter);
+                    }
+                        
+                        
+
+                }, 1000);
+
+            </script>
+
+</body>
+</html>
